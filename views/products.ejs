@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Ürünler </h1>
+    <p>
+    <%= product[0].name %>    <!--with ejs, sending product info from index.ejs  -->
+    <%= product[0].price %>
+    </p>
+
+    <ul>
+        <% product.forEach(product => { %>          <!-- ejseach comment, foreach-->
+            <% if (product.price > 40000) { %>       <!-- ejsif comment, if condition-->
+                <li>
+                    <a href="/products/<%= product.id %>">    <!-- onclick throw to the product/id page -->
+                        <%=product.name%> - <%=product.price%>
+                    </a>
+                   
+                </li>
+            <% } %>
+            
+        <% }) %>
+    </ul>
+</body>
+</html>
