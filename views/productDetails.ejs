@@ -6,9 +6,33 @@
     <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">     <!-- accesing to bootstrap-->
     <title>Document</title>
 </head>
-<body class="bg-warning">
-    <h1>Model: <%= name %></h1>
-    <h1>Fiyat: <%= price %></h1>
-    <img src="/images/<%= imgUrl %>" alt="" width="200px">
+<body>
+    <%- include('partials/navbar') %>
+    <<div class="container mt-3">
+        <div class="row">
+            <div class="col-12">
+                    <div class="card mb-3">
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="/images/<%= products.imgUrl %>" alt="" class="img-fluid">
+                            </div>
+                            <div class="col-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <%= products.name %>
+                                    </h5>
+                                    <p class="card-text">
+                                        <%= products.price %>
+                                    </p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque harum quidem optio repudiandae nulla, illo nam ut neque? Eaque aperiam ad accusamus autem optio debitis, doloremque eum tempore repudiandae eligendi?</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
 </body>
 </html>
